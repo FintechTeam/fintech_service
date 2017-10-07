@@ -37,9 +37,10 @@ gem 'jbuilder', '~> 2.5'
 
 gem 'nokogiri'
 gem 'twitter' 
-# gem 'amazon-ecs'
+gem 'amazon-ecs'
 gem 'faraday'
 gem 'faraday_middleware'
+gem 'ruby_coincheck_client'
 
 
 group :development, :test do
