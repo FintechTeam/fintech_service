@@ -1,0 +1,15 @@
+current directory: /Users/youxi/works/fintech_service/vendor/bundle/ruby/2.4.0/gems/websocket-driver-0.6.5/ext/websocket-driver
+/Users/youxi/.rbenv/versions/2.4.2/bin/ruby -r ./siteconf20171007-29041-15yzo2r.rb extconf.rb
+creating Makefile
+
+current directory: /Users/youxi/works/fintech_service/vendor/bundle/ruby/2.4.0/gems/websocket-driver-0.6.5/ext/websocket-driver
+make "DESTDIR=" clean
+
+current directory: /Users/youxi/works/fintech_service/vendor/bundle/ruby/2.4.0/gems/websocket-driver-0.6.5/ext/websocket-driver
+make "DESTDIR="
+compiling websocket_mask.c
+linking shared-object websocket_mask.bundle
+
+current directory: /Users/youxi/works/fintech_service/vendor/bundle/ruby/2.4.0/gems/websocket-driver-0.6.5/ext/websocket-driver
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 websocket_mask.bundle ./.gem.20171007-29041-1jyflhb
