@@ -1,2 +1,0 @@
-class CoincheckController < ApplicationController
-end
