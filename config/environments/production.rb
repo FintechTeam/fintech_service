@@ -84,7 +84,7 @@ Rails.application.configure do
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
 
-  server "52.90.2.139", user: "deploy", roles: %w{app db web}
+  server "52.91.87.11", user: "deploy", roles: %w{app db web}
 
   set :ssh_options, {
     keys: %w(~/.ssh/id_rsa),
