@@ -18,12 +18,13 @@ class Fisco
       hash = JSON.parse json
     end
 
-    def get_price
+    def get_price(acquisition_count)
       p = Price.new
       p.acquisition_time = DateTime.now
       p.ask = ticker["ask"]
       p.bid = ticker["bid"]
       p.exchange_id = 6
+      p.acquisition_count = acquisition_count
       p.save
     end
   end

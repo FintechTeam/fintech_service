@@ -19,12 +19,13 @@ class Bitbank
       hash["data"]
     end
 
-    def get_price
+    def get_price(acquisition_count)
       p = Price.new
       p.acquisition_time = DateTime.now
       p.ask = ticker["buy"]
       p.bid = ticker["sell"]
       p.exchange_id = 2
+      p.acquisition_count = acquisition_count
       p.save
     end
   end

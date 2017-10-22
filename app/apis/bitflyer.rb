@@ -18,12 +18,13 @@ class Bitflyer
       hash = JSON.parse json
     end
 
-    def get_price
+    def get_price(acquisition_count)
       p = Price.new
       p.acquisition_time = DateTime.now
       p.ask = ticker["best_ask"]
       p.bid = ticker["best_bid"]
       p.exchange_id = 3
+      p.acquisition_count = acquisition_count
       p.save
     end
   end

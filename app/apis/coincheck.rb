@@ -40,12 +40,13 @@ class Coincheck
       hash = JSON.parse json
     end
 
-    def get_price
+    def get_price(acquisition_count)
       p = Price.new
       p.acquisition_time = DateTime.now
       p.ask = ask
       p.bid = bid
       p.exchange_id = 1
+      p.acquisition_count = acquisition_count
       p.save
     end
 

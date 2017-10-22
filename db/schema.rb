@@ -43,9 +43,10 @@ ActiveRecord::Schema.define(version: 20171022073931) do
     t.decimal  "ask"
     t.decimal  "bid"
     t.integer  "exchange_id"
+    t.integer  "acquisition_count"
     t.datetime "acquisition_time"
-    t.datetime "created_at",       null: false
-    t.datetime "updated_at",       null: false
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
   end
 
 end

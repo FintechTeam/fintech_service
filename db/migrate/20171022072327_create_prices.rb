@@ -4,6 +4,7 @@ class CreatePrices < ActiveRecord::Migration[5.0]
       t.decimal :ask
       t.decimal :bid
       t.integer :exchange_id
+      t.integer :acquisition_count
       t.datetime :acquisition_time
 
       t.timestamps
