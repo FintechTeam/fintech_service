@@ -17,9 +17,9 @@ every 10.minutes do
   runner 'Coincheck.get_price'
 end
 
-every 1.minutes do
-  runner 'TwitterApi.tweet("cron test")'
-end
+# every 1.days do
+#   runner 'TwitterApi.tweet("Hello!")'
+# end
 
 # every 2.hours do
 #   command "/usr/bin/some_great_command"
