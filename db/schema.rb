@@ -10,6 +10,26 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 20171022052007) do
+
+  create_table "news", force: :cascade do |t|
+    t.string   "title"
+    t.text     "url"
+    t.text     "content"
+    t.text     "thumbnail_url"
+    t.integer  "news_site_id"
+    t.datetime "news_posted_at"
+    t.datetime "tweet_posted_at"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+  end
+
+  create_table "news_sites", force: :cascade do |t|
+    t.string   "site_name"
+    t.string   "url"
+    t.string   "api_url"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
 end
