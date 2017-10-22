@@ -10,9 +10,11 @@
 set :output, 'log/crontab.log'
 # ジョブの実行環境の指定
 set :environment, :production
+env :PATH, ENV['PATH']
+job_type :rbenv_rake, %q!eval "$(rbenv init -)"; cd :path && :environment_variable=:environment bundle exec rake :task --silent :output!
 
 every '*/10 * * * *' do
-  runner 'Coincheck.rate("sell")'
+  runner 'Coincheck.get_price'
 end
 
 # every 2.hours do

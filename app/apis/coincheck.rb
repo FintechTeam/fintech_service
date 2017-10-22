@@ -45,6 +45,7 @@ class Coincheck
       p.acquisition_time = DateTime.now
       p.ask = ask
       p.bid = bid
+      p.exchange_id = 1
       p.save
     end
 
