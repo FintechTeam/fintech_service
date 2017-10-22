@@ -1,4 +1,4 @@
-class Bitbank
+class Zaif
   class << self
     # https://docs.bitbank.cc/
 
@@ -6,7 +6,7 @@ class Bitbank
     def ticker
       key = "API_KEY"
       secret = "API_SECRET"
-      endpoint_url = "https://public.bitbank.cc/" + "btc_jpy" + "/ticker"
+      endpoint_url = "https://api.zaif.jp/api/1/ticker/btc_jpy"
       uri = URI.parse endpoint_url
 
       https = Net::HTTP.new(uri.host, uri.port)
@@ -16,15 +16,14 @@ class Bitbank
       }
       json = response.body
       hash = JSON.parse json
-      hash["data"]
     end
 
     def get_price
       p = Price.new
       p.acquisition_time = DateTime.now
-      p.ask = ticker["buy"]
-      p.bid = ticker["sell"]
-      p.exchange_id = 2
+      p.ask = ticker["ask"]
+      p.bid = ticker["bid"]
+      p.exchange_id = 4
       p.save
     end
   end

@@ -1,4 +1,4 @@
-class Bitbank
+class Btcbox
   class << self
     # https://docs.bitbank.cc/
 
@@ -6,7 +6,7 @@ class Bitbank
     def ticker
       key = "API_KEY"
       secret = "API_SECRET"
-      endpoint_url = "https://public.bitbank.cc/" + "btc_jpy" + "/ticker"
+      endpoint_url = "https://www.btcbox.co.jp/api/v1/ticker/"
       uri = URI.parse endpoint_url
 
       https = Net::HTTP.new(uri.host, uri.port)
@@ -16,7 +16,6 @@ class Bitbank
       }
       json = response.body
       hash = JSON.parse json
-      hash["data"]
     end
 
     def get_price
@@ -24,7 +23,7 @@ class Bitbank
       p.acquisition_time = DateTime.now
       p.ask = ticker["buy"]
       p.bid = ticker["sell"]
-      p.exchange_id = 2
+      p.exchange_id = 5
       p.save
     end
   end
